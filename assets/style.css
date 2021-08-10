@@ -1,0 +1,158 @@
+:root {
+    --pale-blue: hsl(225, 100%, 94%);
+    --bright-blue: hsl(245, 75%, 52%);
+    --very-pale-blue: hsl(225, 100%, 98%);
+    --desaturated-blue: hsl(224, 23%, 55%);
+    --dark-blue: hsl(223, 47%, 23%);
+}
+
+*  {
+    box-sizing: border-box;
+    padding: 0;
+    margin: 0;
+}
+
+body {
+    font-family: 'Red Hat Display', sans-serif;
+    font-weight: 500;
+    font-size: 16px;
+    background-color: var(--pale-blue);
+    line-height: 1.6;
+    background-image: url("../images/pattern-background-mobile.svg");
+    background-repeat: no-repeat;
+    background-size: contain;
+}
+
+p {
+    color: var(--desaturated-blue);
+}
+
+.container {
+    width: fit-content;
+    height: auto;
+    align-items: center;
+    justify-content: center;
+    background-color: #FFF;
+    border-radius: 15px;
+    margin: 30px 20px;
+}
+
+.order_pic {
+    width: 100%;
+    border-radius: 15px 15px 0 0;
+}
+
+.order_summary {
+    padding: 20px;
+    text-align: center;
+}
+
+.order_summary h1 {
+    font-weight: 900;
+    margin-bottom: 20px;
+}
+
+.order_summary p {
+    font-weight: 500;
+    margin-bottom: 20px;
+}
+
+.container .order_summary .payment_plan {
+    display: flex;
+    flex-direction: row;
+    padding: 15px 10px;
+    text-align: center;
+    background-color: var(--very-pale-blue);
+    border-radius: 15px;
+}
+
+.container .order_summary .payment_plan img {
+    width: 20%;
+    height: 20%;
+    align-self: center;
+}
+
+.container .order_summary .payment_plan .payment_summary {
+    margin-left: -10px;
+    margin-right: 30px;
+}
+
+.container .order_summary .payment_plan .payment_summary span {
+    font-size: 16px;
+}
+
+.container .order_summary .payment_plan .payment_summary .title {
+    font-size: 17px;
+    font-weight: 900;
+}
+
+.container .order_summary .payment_plan a {
+    align-self: center;
+    font-weight: 700;
+    color: var(--bright-blue);
+}
+
+.container .order_summary .payment_plan a:hover {
+    color: var(--desaturated-blue);
+}
+
+.container .order_summary .pay_button {
+    background-color: var(--bright-blue);
+    color: var(--very-pale-blue);
+    font-weight: 700;
+    margin: 20px 0;
+    width: 100%;
+    padding: 10px 20px;
+    display: inline-flex;
+    justify-content: center;
+    align-items: center;
+    border-radius: 10px;
+}
+
+.container .order_summary .pay_button:hover {
+    background-color: var(--desaturated-blue);
+}
+
+.container .order_summary a {
+    color: var(--desaturated-blue);
+    text-decoration: none;
+    font-weight: 700;
+}
+
+
+
+@media (min-width: 435px) {
+    body { 
+        max-width: 500px; 
+        margin: 30px auto !important; 
+        background-image: url("../images/pattern-background-desktop.svg");
+        background-repeat: no-repeat;
+        background-size: contain;
+        
+    }
+
+    .container {
+        display: inline-grid;
+        height: 80vh;
+        max-width: 450px; 
+    } 
+
+    .order_pic {
+        height: 100%;
+        border: 0;
+        margin: 0;
+    }
+
+    .order_summary {
+        padding: 60px;
+        text-align: center;
+    }
+
+    .order_summary h1 {
+        margin-top: -60px;
+    }
+
+    .container .order_summary a {
+        color: var(--dark-blue);
+    }
+}
